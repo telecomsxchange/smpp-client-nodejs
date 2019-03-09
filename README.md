@@ -13,7 +13,7 @@ if you dont have an existing buyer account on TelecomsXChange visit www.telecoms
 
 # Got Stuck?
 
-If you're stuck please open a github issue.
+If you're stuck please open a github issue (https://github.com/telecomsxchange/smpp-client-nodejs/issues )
 
 
 
