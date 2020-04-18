@@ -1,7 +1,15 @@
 const nanoid = require('nanoid')
 
 var smpp = require('smpp');
-var session = smpp.connect('smpp://staging.telecomsxchange.com:2776');
+
+// SMPP Host (Destination SMSC server you want to connect to)
+
+var session = smpp.connect('smpp://staging.telecomsxchange.com:2776');     // STAGING HOST
+
+// PRODUCTION SMPP URL
+
+//var session = smpp.connect('smpp://smpp01.telecomsxchange.com:2776');     
+
 
 // Parse the price per message from TCXC SMPP proxy and dsiplaye it in the response.
 
