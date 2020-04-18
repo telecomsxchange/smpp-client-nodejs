@@ -1,7 +1,7 @@
 {
   "name": "smpp",
   "version": "1.0.0",
-  "description": "",
+  "description": "NodeJS SMPP Client",
   "main": "proxy.js",
   "dependencies": {
     "smpp": "^0.3.1",
