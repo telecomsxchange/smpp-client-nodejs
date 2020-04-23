@@ -6,11 +6,12 @@
   "dependencies": {
     "smpp": "^0.3.1",
     "unique-random": "^2.0.0"
+    "system-sleep": "^1.2.0"
   },
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "author": "TelecomXChange LLC",
   "license": "ISC"
 }
