@@ -59,6 +59,15 @@ npm install
 
 - Open smpp-stress-tester.js in your code editor and configure SMPP HOST, PORT, USER, PASS, MESSAGES COUNT etc..
 
+```javascript
+
+
+const test_sms_count = 5000;                // Number of SMS messages to send.
+const req_sec_limit = 65;                   // Number of messages per second
+const sleep_time = 1/req_sec_limit*1000;    // Sleep time / Wait for x secs
+
+```
+
 
 - Start SMPP test
 
