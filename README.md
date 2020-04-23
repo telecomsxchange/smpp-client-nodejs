@@ -18,7 +18,7 @@ git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
 
 ```shell
 
-cd smpp-client-nodejs
+cd /smpp-client-nodejs/
 
 ```
 
