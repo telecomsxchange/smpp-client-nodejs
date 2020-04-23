@@ -97,6 +97,6 @@ SendViber.js
 
 If you're stuck please open a github issue (https://github.com/telecomsxchange/smpp-client-nodejs/issues )
 
-
+If you're a TCXC member (Paying subscriber) you may open a trouble ticket by emailing support@telecomsxchange.com
 
 
