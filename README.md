@@ -12,7 +12,7 @@ if you dont have an existing buyer account on TelecomsXChange visit www.telecoms
 - Clone this repository to your machine
 ```shell
 
-git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
+# git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
 
 ```
 
@@ -26,9 +26,9 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-#npm install
+# npm install
 
-#npm install system-sleep
+# npm install system-sleep
 
 ```
 
@@ -39,7 +39,7 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-node send.js 
+# node send.js 
 
 ```
 
@@ -47,7 +47,7 @@ node send.js
 
 ```shell
 
-cd /smpp-client-nodejs/
+# cd /smpp-client-nodejs/
 
 ```
 
@@ -55,7 +55,7 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-npm install
+# npm install
 
 ```
 
@@ -75,7 +75,7 @@ const sleep_time = 1/req_sec_limit*1000;    // Sleep time / Wait for x secs
 
 ```shell
 
-node smpp-stress-tester.js
+# node smpp-stress-tester.js
 
 ```
 
@@ -89,7 +89,7 @@ If you have done that already, you may send a test message to a viber phone numb
 
 ```shell
 
-SendViber.js
+# node SendViber.js
 
 ```
 
