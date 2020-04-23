@@ -41,6 +41,11 @@ node send.js
 
 ```
 
+### Using this script to send a message to Viber user
+
+This configuration only works if you're using TCXC to send messages through viber. You must first have purchased Viber SMS route on TCXC first in order to be routed through the correct link. 
+
+
 # Got Stuck?
 
 If you're stuck please open a github issue (https://github.com/telecomsxchange/smpp-client-nodejs/issues )
