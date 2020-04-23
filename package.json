@@ -5,7 +5,7 @@
   "main": "proxy.js",
   "dependencies": {
     "smpp": "^0.3.1",
-    "unique-random": "^2.0.0"
+    "unique-random": "^2.0.0",
     "system-sleep": "^1.2.0"
   },
   "devDependencies": {},
