@@ -41,10 +41,46 @@ node send.js
 
 ```
 
+### SMPP Stress Test Client
+
+```shell
+
+cd /smpp-client-nodejs/
+
+```
+
+- Install node modules
+
+```shell
+
+npm install
+
+```
+
+- Open smpp-stress-tester.js in your code editor and configure SMPP HOST, PORT, USER, PASS, MESSAGES COUNT etc..
+
+
+- Start SMPP test
+
+```shell
+
+node smpp-stress-tester.js
+
+```
+
+
+
 ### Using this SendViber.js script to send a message to Viber user
 
-This configuration only works if you're using TCXC to send messages through viber. You must first have purchased Viber SMS route on TCXC first in order to be routed through the correct link. 
+This configuration only works if you're using TCXC to send messages through viber. You must first have purchased Viber SMS route on TCXC first in order to be routed through the correct link, We also require sender ID verification process to whitelist your brandname or sender id.
 
+If you have done that already, you may send a test message to a viber phone number as shown below.
+
+```shell
+
+SendViber.js
+
+```
 
 # Got Stuck?
 
