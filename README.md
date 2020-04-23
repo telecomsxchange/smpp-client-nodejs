@@ -26,7 +26,9 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-npm install
+#npm install
+
+#npm install system-sleep
 
 ```
 
