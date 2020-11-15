@@ -1,12 +1,20 @@
-const nanoid = require('nanoid')
+//const nanoid = require('nanoid')
+
+var { nanoid } = require("nanoid");
+var ID = nanoid(24);
+
 
 var smpp = require('smpp');
 var session = smpp.connect('smpp://smpp01.telecomsxchange.com:2776');
 
+
+// Parse Billing Price TLV from TCXC Proxy
 smpp.addTLV('billing_price', {
     id: 0x1520,
     type: smpp.types.tlv.string
 });
+
+// Parse Billed Message Counts (Segments) if more than one.
 
 smpp.addTLV('billed_msgs_cnt', {
     id: 0x1521,
@@ -14,7 +22,7 @@ smpp.addTLV('billed_msgs_cnt', {
 });
 
 
-// Viber TLVs on TelecomsXChange:
+// Viber TLVs on TCXC SMPP Proxy :
 
 smpp.addTLV('viber_text', {
     id: 0x146A,
@@ -42,7 +50,7 @@ smpp.addTLV('viber_failover_step', {
 });
 
 
-
+// SMPP AUTHENTICATION DETAILS 
 
 session.bind_transceiver({
 	system_id: 'SMPP USER',
@@ -55,13 +63,13 @@ session.bind_transceiver({
 			destination_addr: '123456789',    // Viber User Phone Number
 			source_addr: '19540000000',      // Your Phone number
 			registered_delivery: 1,
-			message_id: nanoid(24),
-			viber_text: 'Viber Text Here ' + nanoid(4),
-			viber_button_cta: 'https://google.com',      // URL
-			viber_button_text: 'Click Here', 
-			viber_image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Tom_Hanks_2016.jpg/220px-Tom_Hanks_2016.jpg',
-			short_message: 'Hello World, Your code is'  + nanoid(4),
-			// message_payload: 'Some Long Text......' + nanoid(4)
+			message_id: ID,
+			viber_text: 'Hello World - Your code is ', // Viber text - Title 
+			viber_button_cta: 'https://google.com',      // URL - Hyperlink
+			viber_button_text: 'Click Here',  // Show Button
+			viber_image_url: 'https://upload.wikimedia.org/wikipedia/commons/thumb/f/fb/Tom_Hanks_2016.jpg/220px-Tom_Hanks_2016.jpg', // Media URL
+			short_message: 'Hello World, Your code is'  + ID,  // Body of your message
+			
 
 		}, function(pdu) {
 			if (pdu.command_status == 0) {

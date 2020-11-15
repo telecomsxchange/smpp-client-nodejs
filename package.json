@@ -4,7 +4,7 @@
   "description": "NodeJS SMPP Client",
   "main": "proxy.js",
   "dependencies": {
-    "nano": "^9.0.1",
+    "nanoid": "^3.1.16",
     "smpp": "^0.3.1",
     "unique-random": "^2.0.0",
     "system-sleep": "^1.2.0"

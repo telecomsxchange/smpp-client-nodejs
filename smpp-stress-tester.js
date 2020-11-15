@@ -1,14 +1,23 @@
-const nanoid = require('nanoid')
+//const nanoid = require('nanoid')
+
+var { nanoid } = require("nanoid");
+var ID = nanoid(24);
 const sleep = require('system-sleep')
 
 var smpp = require('smpp');
+
+// SMPP HOST TARGET 
+
 var session = smpp.connect('smpp://YOUR-SMPP-IP-OR-DOMAIN:PORT');
 
+// Billing TLV - Works with TCXC Platform only
 
 smpp.addTLV('billing_price', {
     id: 0x1520,
     type: smpp.types.tlv.string
 });
+
+// Settings & Preferences 
 
 const test_sms_count = 5000;                // Number of SMS messages to send.
 const req_sec_limit = 65;                   // Number of messages per second
@@ -39,8 +48,8 @@ session.bind_transceiver({
 				destination_addr: '12061233333',         // To Phone Number
 				source_addr: '12071233333',             // From Number or Sender ID
 				registered_delivery: 1, 
-				message_id: nanoid(24),
-				short_message: 'verification code BBB: ' + nanoid(4) ,    // Generate random verification code for every message. 
+				message_id: ID,
+				short_message: 'verification code BBB: ' + ID ,    // Generate random verification code for every message. 
 				//message_payload: 'verification code AAA:' + nanoid(4)  // Uncomment if your SMPP server supports message_payload for long messages.
 	
 			}, function(pdu) {
