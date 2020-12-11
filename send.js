@@ -56,7 +56,7 @@ session.bind_transceiver(
           message_id: ID,
           short_message: "Your verification code is " + ID, // The message body, Replace it with the message you want to send.
 
-          //message_payload: 'text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text       !1 text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text       !2 text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text  text       !3'
+          //message_payload: 'Optional message payload supports up to 65536 bytes'
         },
         function (pdu) {
           if (pdu.command_status == 0) {
