@@ -45,7 +45,10 @@ session.bind_transceiver(
       session.submit_sm(
         {
           destination_addr: "12345678911", // The destination phone number you want to send a message to
-
+          source_addr_ton:5,
+          source_addr_npi:0,
+          dest_addr_ton:1,
+          dest_addr_npi:1,
           //source_addr: 'Google',                  // The Sender ID or Address, This will be displayed to the destination phone number
 
           source_addr: "Alert",
