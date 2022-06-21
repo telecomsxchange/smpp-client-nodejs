@@ -1,7 +1,7 @@
 {
   "name": "smpp",
   "version": "1.0.0",
-  "description": "NodeJS SMPP Client",
+  "description": "Several useful NodeJS SMPP Clients for sending single or bulk messages using nodejs", 
   "main": "proxy.js",
   "dependencies": {
     "nanoid": "^3.1.16",
@@ -18,7 +18,9 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+    
   },
-  "author": "TelecomXChange LLC",
-  "license": "ISC"
+  "author": "TelecomXChange LLC - Ameed Jamous",
+  "license": "MIT"
+  
 }

@@ -1,3 +1,14 @@
+// This software is released under the MIT license. See the LICENSE file for more information.  
+// Telecom XChange LLC Copy Right: (c) 2019-2022, Ameed Jamous.  All rights reserved. 
+// License: MIT (It's free to use, modify and distribute.)
+// Version: 1.0.0
+// Release Date: 2022-06-22 (Last Updated: 2020-06-22)
+// Description: SMPP stress tester using node.js.
+// Github Repository: https://github.com/telecomsxchange/smpp-client-nodejs.git 
+// Warranty: No warranty is provided. The software is provided "as is". 
+// --------------------------------------------------------------------------------------------------------------------
+
+
 //const nanoid = require('nanoid')
 
 var { nanoid } = require("nanoid");
@@ -10,7 +21,7 @@ var smpp = require('smpp');
 
 var session = smpp.connect('smpp://YOUR-SMPP-IP-OR-DOMAIN:PORT');
 
-// Billing TLV - Works with TCXC Platform only
+// Billing TLV - Works with TCXC Platform only, you can use this TLV to send the billing price to the SMSC via SMPP.
 
 smpp.addTLV('billing_price', {
     id: 0x1520,
@@ -35,7 +46,7 @@ session.bind_transceiver({
 
 //	SMPP Credintials used during the test.
 
-        system_id: 'ENTER SMPP USER',
+        system_id: 'ENTER SMPP USER', 
         password: 'ENTER SMPP PASSWORD'
         
 }, function(pdu) {

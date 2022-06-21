@@ -28,11 +28,14 @@ cd /smpp-client-nodejs/
 
 # npm install
 
-# npm install system-sleep
-
 ```
 
-- Open send.js in your text-editor and add your SMPP host,port, username, password.
+- Open send.js in your text-editor and add configure your 
+  - SMPP host,port
+  - SMPP system_id, password
+  - Destination Number 
+  - Sender ID (src_address)
+  - Message body (short_message or message_payload)
 
 
 - Send SMS 
@@ -43,7 +46,7 @@ cd /smpp-client-nodejs/
 
 ```
 
-### SMPP Stress Test Client
+### Using SMPP Stress Test Client
 
 ```shell
 
@@ -79,6 +82,11 @@ const sleep_time = 1/req_sec_limit*1000;    // Sleep time / Wait for x secs
 
 ```
 
+### Using Perftest (recommended)
+
+Open perftest.js in your code editor and configure SMPP HOST, PORT, USER, PASS, MESSAGES COUNT & send
+
+
 
 
 ### Using this SendViber.js script to send a message to Viber user
@@ -97,6 +105,10 @@ If you have done that already, you may send a test message to a viber phone numb
 
 If you're stuck please open a github issue (https://github.com/telecomsxchange/smpp-client-nodejs/issues )
 
-If you're a TCXC member (Paying subscriber) you may open a trouble ticket by emailing support@telecomsxchange.com
+If you're a TCXC member you can open a trouble ticket by emailing support@telecomsxchange.com
+
+### Contribuations
+
+Please create a pull request to submit your contrubuations back with the community. Thank you
 
 
