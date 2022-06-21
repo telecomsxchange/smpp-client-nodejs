@@ -1,15 +1,15 @@
-![](https://user-images.githubusercontent.com/26701933/54167718-c5161f80-4473-11e9-82cc-f6ff64227d8e.png)
 
-### SMPP Client (NodeJS) works with TCXC SMPP proxy (SMS Exchange) or any other SMPP host.
 
-You can get an SMPP account at https://members.telecomsxchange.com
+### SMPP Client (NodeJS) works with TCXC SMS Exchange or any other SMSC host.
 
-if you dont have an existing buyer account on TelecomsXChange visit www.telecomsxchange.com/buyerjoin 
+You can get an SMPP account at https://members.telecomsxchange.com 
 
 
 ### Installation
 
 - Clone this repository to your machine
+
+
 ```shell
 
 $ git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
@@ -101,7 +101,7 @@ If you have done that already, you may send a test message to a viber phone numb
 
 ```shell
 
-# node SendViber.js
+$ node SendViber.js
 
 ```
 
