@@ -1,8 +1,8 @@
 
 
-### SMPP Client (NodeJS) works with TCXC SMS Exchange or any other SMSC host.
+### SMPP Client (NodeJS) 
 
-You can get an SMPP account at https://members.telecomsxchange.com 
+The SMPP client(s) in this project works with TCXC (SMS Exchange) or/and any other SMSC host.
 
 
 ### Installation
