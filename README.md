@@ -12,13 +12,13 @@ if you dont have an existing buyer account on TelecomsXChange visit www.telecoms
 - Clone this repository to your machine
 ```shell
 
-# git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
+$ git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
 
 ```
 
 ```shell
 
-cd /smpp-client-nodejs/
+$ cd /smpp-client-nodejs/
 
 ```
 
@@ -26,7 +26,7 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-# npm install
+$ npm install
 
 ```
 
@@ -42,7 +42,7 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-# node send.js 
+$ node send.js 
 
 ```
 
@@ -50,7 +50,7 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-# cd /smpp-client-nodejs/
+$ cd /smpp-client-nodejs/
 
 ```
 
@@ -58,7 +58,7 @@ cd /smpp-client-nodejs/
 
 ```shell
 
-# npm install
+$ npm install
 
 ```
 
@@ -78,15 +78,19 @@ const sleep_time = 1/req_sec_limit*1000;    // Sleep time / Wait for x secs
 
 ```shell
 
-# node smpp-stress-tester.js
+$ node smpp-stress-tester.js
 
 ```
 
 ### Using Perftest (recommended)
 
-Open perftest.js in your code editor and configure SMPP HOST, PORT, USER, PASS, MESSAGES COUNT & send
+Open `perftest.js` in your code editor and configure `SMPP HOST, PORT, USER, PASS, MESSAGES COUNT`, once done, execute the script
 
+```shell
 
+$ node perftest.js
+
+```
 
 
 ### Using this SendViber.js script to send a message to Viber user
