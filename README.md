@@ -31,11 +31,15 @@ $ npm install
 ```
 
 - Open send.js in your text-editor and add configure your 
-  - SMPP host,port
+
+```
+  - SMPP host:port
   - SMPP system_id, password
   - Destination Number 
   - Sender ID (src_address)
   - Message body (short_message or message_payload)
+  
+  ```
 
 
 - Send SMS 
@@ -62,7 +66,17 @@ $ npm install
 
 ```
 
-- Open smpp-stress-tester.js in your code editor and configure SMPP HOST, PORT, USER, PASS, MESSAGES COUNT etc..
+- Open smpp-stress-tester.js in your code editor and configure:-
+
+
+```
+  - SMPP host:port
+  - SMPP system_id, password
+  - Destination Number 
+  - Sender ID (src_address)
+  - Message body (short_message or message_payload)
+  
+  ```
 
 ```javascript
 
@@ -109,7 +123,6 @@ $ node SendViber.js
 
 If you're stuck please open a github issue (https://github.com/telecomsxchange/smpp-client-nodejs/issues )
 
-If you're a TCXC member you can open a trouble ticket by emailing support@telecomsxchange.com
 
 ### Contribuations
 
