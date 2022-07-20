@@ -2,7 +2,7 @@
 // Telecom XChange LLC Copy Right: (c) 2019-2022, Ameed Jamous.  All rights reserved. 
 // License: MIT (It's free to use, modify and distribute.)
 // Version: 1.0.0
-// Release Date: 2022-06-22 (Last Updated: 2020-06-22)
+// Release Date: 2022-06-22 (Last Updated: 2020-07-20)
 // Description: Perfomance test for SMPP protocol using node.js.
 // Github Repository: https://github.com/telecomsxchange/smpp-client-nodejs.git 
 // Warranty: No warranty is provided. The software is provided "as is". 
