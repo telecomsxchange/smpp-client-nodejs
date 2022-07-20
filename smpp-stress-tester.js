@@ -17,9 +17,13 @@ const sleep = require('system-sleep')
 
 var smpp = require('smpp');
 
-// SMPP HOST TARGET 
+// SMPP HOST TARGET (None TLS)
 
 var session = smpp.connect('smpp://YOUR-SMPP-IP-OR-DOMAIN:PORT');
+
+// SMPP HOST TARGET (TLS)
+
+//var session = smpp.connect('ssmpp://YOUR-SMPP-IP-OR-DOMAIN:TLSPORT');
 
 // Billing TLV - Works with TCXC Platform only, you can use this TLV to send the billing price to the SMSC via SMPP.
 
