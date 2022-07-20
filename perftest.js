@@ -13,9 +13,13 @@
 
 var smpp = require('smpp'); // SMPP client library 
 
-// Configure SMPP host and port - replace with your own host and port values 
+// Configure SMPP host and port - replace with your own host and port values (None TLS)
 
-var session = smpp.connect('smpp://staging.telecomsxchange.com:2776');
+var session = smpp.connect('smpp://smpphost.com:2775');
+
+// Configure SMPP host and port - replace with your own host and port values (TLS)
+
+// var session = smpp.connect('ssmpp://smpphost.com:4776');
 
 // Configure SMPP session
 
