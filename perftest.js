@@ -35,6 +35,11 @@ session.bind_transceiver({
         
             // Configure SMS message to be sent to SMPP server and send it. In this example its set to send 1000 SMS messages to the destination number 19542400000.
                 console.log(process.hrtime());  
+               
+                // create a loop that runs every 5 seconds and sends a message to the SMSC server 
+                var i = 0;
+                var interval = setInterval(function() { 
+               
                 for (ii = 0; ii < 1000; ii++ ) { 
                         // Successfully bound
                         session.submit_sm({
@@ -53,6 +58,8 @@ session.bind_transceiver({
                                 //console.log(pdu);
                         });
                 }
+                       
+              }, 3000);  // 3000 milliseconds = 3 seconds  
           
                 // Handle Delivery Receipts (DR) from SMPP server (if enabled) and print them to the console.
 
