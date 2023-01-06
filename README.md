@@ -2,103 +2,70 @@
 
 ### SMPP Client (NodeJS) 
 
-The SMPP client(s) in this project works with TCXC (SMS Exchange) or/and any other SMSC host.
+These scripts are written in Node.js that uses the SMPP (Short Message Peer-to-Peer) protocol to send SMS messages through a specified SMPP host.
+
+To use this script, you'll need to have Node.js and the 'smpp' library installed on your machine. You can install the 'smpp' library by running the following commands:
 
 
-### Installation
+**Installation**
 
-- Clone this repository to your machine
-
-
-```shell
-
-$ git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
-
-```
+Clone this repository to your machine:
 
 ```shell
-
-$ cd /smpp-client-nodejs/
-
+git clone https://github.com/telecomsxchange/smpp-client-nodejs.git
 ```
-
-- Install node modules
+Change into the project directory:
 
 ```shell
+cd smpp-client-nodejs
+```
 
-$ npm install
+Install the required dependencies:
+    
+```shell
+npm install
+```
+
+
+
+Once you have the necessary dependencies installed and access to an SMPP host, you can configure the script by replacing the placeholder values in the following lines of code:
+
+```javascript
+system_id: 'User', // Insert your SMPP server System_ID
+password: 'password' // Insert your SMPP server password
+
+
+destination_addr: '19542400000', // Replace with your destination number  
+source_addr: 'Google', // Replace your source number (sender id)
+
+short_message: 'Your verification code is  G-' + ID +ii // Replace with your message content
 
 ```
 
-- Open send.js in your text-editor and add configure your 
 
-```
-  - SMPP host:port
-  - SMPP system_id, password
-  - Destination Number 
-  - Sender ID (src_address)
-  - Message body (short_message or message_payload)
-  
-  ```
 
 
 - Send SMS 
 
 ```shell
 
-$ node send.js 
-
-```
-
-### Using SMPP Stress Test Client
-
-```shell
-
-$ cd /smpp-client-nodejs/
-
-```
-
-- Install node modules
-
-```shell
-
-$ npm install
-
-```
-
-- Open smpp-stress-tester.js in your code editor and configure:-
-
-
-```
-  - SMPP host:port
-  - SMPP system_id, password
-  - Destination Number 
-  - Sender ID (src_address)
-  - Message body (short_message or message_payload)
-  
-  ```
-
-```javascript
-
-
-const test_sms_count = 5000;                // Number of SMS messages to send.
-const req_sec_limit = 65;                   // Number of messages per second
-const sleep_time = 1/req_sec_limit*1000;    // Sleep time / Wait for x secs
+$ node send.js  // send single message
+$ node perftest.js // send multiple messages per second
 
 ```
 
 
-- Start SMPP test
+**Using Perftest to send Multiple messages per second**
 
-```shell
+To use the perftest.js script, you will need to open it in a code editor and configure the following values:
 
-$ node smpp-stress-tester.js
+    SMPP HOST: the hostname or IP address of your SMPP server
+    PORT: the port number to use for the SMPP connection
+    USER: the system ID for authenticating with the SMPP server
+    PASS: the password for authenticating with the SMPP server
+    MESSAGES COUNT: the number of messages to send through the SMPP server
 
-```
-
-### Using Perftest (recommended)
-
-Open `perftest.js` in your code editor and configure `SMPP HOST, PORT, USER, PASS, MESSAGES COUNT`, once done, execute the script
+Once you have configured these values, you can execute the script by running the following command in your terminal:
 
 ```shell
 
@@ -107,25 +74,28 @@ $ node perftest.js
 ```
 
 
-### Using this SendViber.js script to send a message to Viber user
+**Need help?**
 
-This configuration only works if you're using TCXC to send messages through viber. You must first have purchased Viber SMS route on TCXC first in order to be routed through the correct link, We also require sender ID verification process to whitelist your brandname or sender id.
+If you're having trouble using this project or have a question about it, please don't hesitate to reach out. We're here to help!
 
-If you have done that already, you may send a test message to a viber phone number as shown below.
+One way to get help is to open an issue on the project's GitHub page. When opening an issue, please provide as much detail as possible about the problem you're experiencing. This could include:
 
-```shell
+    A detailed description of the problem
+    The version of the project that you're using
+    Any error messages or logs that you're seeing
+    Steps to reproduce the problem
 
-$ node SendViber.js
+We'll do our best to assist you and resolve any issues that you're experiencing. Thank you for using this project!
+**Contributing**
 
-```
+We welcome contributions to this project! If you're interested in contributing, please follow these steps:
 
-### Got Stuck?
+    1- Fork the repository and clone it to your local machine.
+    2- Create a new branch for your changes.
+    3- Make your changes and commit them to your branch.
+    4- Push your branch to your fork on GitHub.
+    5- Open a pull request on the original repository.
 
-If you're stuck please open a github issue (https://github.com/telecomsxchange/smpp-client-nodejs/issues )
 
-
-### Contribuations
-
-Please create a pull request to submit your contrubuations back with the community. Thank you
 
 
