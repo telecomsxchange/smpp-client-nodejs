@@ -9,17 +9,24 @@
 // --------------------------------------------------------------------------------------------------------------------
 
 //const nanoid = require('nanoid')
+/* //////////
+   nanoid is only compatible with ES module system, therefore we need to add "type": "module" in package.json to use it in nodejs. 
+   In order to use CommonJS require statement we should add the following statements.
+    /////////*/
 
-var { nanoid } = require("nanoid");
-var ID = nanoid(24);
+import { createRequire } from "module";
+const require = createRequire(import.meta.url);
+
+import { nanoid } from 'nanoid';
+let ID = nanoid(24);
 
 // Use https://github.com/farhadi/node-smpp (SMPP client library)
 
-var smpp = require("smpp");
+const smpp = require("smpp");
 
 // SMPP Host (Destination SMSC server you want to connect to)
 
-var session = smpp.connect("smpp://smpp01.telecomsxchange.com:2776"); // PROD SMSC
+const session = smpp.connect("smpp://smpp01.telecomsxchange.com:2776"); // PROD SMSC
 
 // CUSTOM TLV PARSING, Parse the price per message from TCXC SMSC and displayed it in the response. 
 
