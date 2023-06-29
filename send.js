@@ -63,6 +63,7 @@ session.bind_transceiver(
           if (pdu.command_status == 0) { // Successfully submitted
             // Message successfully sent
             console.log("message sent OK");
+            return; //otherwise the outer console.log("Something happened", pdu); will always get executed 
           } else {
             // Message failed to be sent
             console.log("message sending failed");
